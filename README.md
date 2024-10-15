@@ -4,7 +4,7 @@ Effortlessly track and simulate caret movements across any device. In real-time 
 
 I developed this feature because, as of this writing, the official EditorJs has not yet implemented it. Feel free to use, customize, and configure it to suit your needs. Cheers! 🥂🥂
 
-<video controls src="https://github.com/w99910/editorjs-caret-selection/raw/refs/heads/master/assets/demo.mp4" title="Caret Selection Demo"></video>
+![Demo](https://github.com/w99910/editorjs-caret-selection/raw/refs/heads/master/assets/demo.gif)
 
 ## Table Of Contents
 
