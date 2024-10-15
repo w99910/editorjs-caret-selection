@@ -1,0 +1,30 @@
+{
+  "name": "editorjs-caret-selection",
+  "version": "0.0.1",
+  "description": "Track Caret, Selection, and easily simulate it for real-time collaboration feature",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w99910/editorjs-caret-selection.git"
+  },
+  "keywords": [
+    "editorjs",
+    "caret",
+    "selection",
+    "real-time",
+    "realtime",
+    "collaboration"
+  ],
+  "author": {
+    "name": "Thomas Brillion",
+    "email": "thomasbrillionn@gmail.com"
+  },
+  "devDependencies": {
+    "vite": "^5.3.5"
+  },
+  "license": "MIT"
+}
