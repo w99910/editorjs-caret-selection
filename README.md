@@ -1,5 +1,7 @@
 # EditorJs Caret Selection
 
+> Note: I found out that the caret position is sometimes incorrect in some devices. I will figure out the solution. Let me know if you have idea or solution on it. 
+
 Effortlessly track and simulate caret movements across any device. In real-time collaboration tools like Notion or Google Docs, you've likely noticed a caret indicating when another user is editing or viewing the same document.
 
 I developed this feature because, as of this writing, the official EditorJs has not yet implemented it. Feel free to use, customize, and configure it to suit your needs. Cheers! 🥂🥂
