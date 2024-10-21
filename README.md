@@ -1,6 +1,6 @@
 # EditorJs Caret Selection
 
-> Note: I found out that the caret position is sometimes incorrect in some devices. I will figure out the solution. Let me know if you have idea or solution on it. 
+> TIP: In order to show approximate correct caret position, please specify font family. 
 
 Effortlessly track and simulate caret movements across any device. In real-time collaboration tools like Notion or Google Docs, you've likely noticed a caret indicating when another user is editing or viewing the same document.
 
@@ -13,6 +13,7 @@ I developed this feature because, as of this writing, the official EditorJs has 
 - Installation
 - Usage
 - Realtime Caret Approach
+- Tips
 - Bugs
 - License
 - Support
@@ -119,6 +120,10 @@ caretSelection.hideSelection('my-unique-id');
 ```js
 let caret = caretSelection.getCurretSelection();
 ```
+
+## Tips
+
+In order to calculate approximately correct caret position, please specify font family instead of letting browser determine the font family.
 
 ## Realtime Caret Approach
 

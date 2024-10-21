@@ -87,7 +87,7 @@ class q {
       l.lines.forEach((m) => {
         let C = l.startOffset + m.startIndex, S = l.startOffset + m.endIndex, k = e.startOffset > C ? e.startOffset : C, B = e.endOffset > S ? S : e.endOffset;
         if (e.startOffset !== 0 && e.endOffset !== 0 && e.startOffset > S) return;
-        let T = E + m.lineIndex * x + "px", $ = k !== C ? w + h(m.content.substring(0, k - C)) + "px" : w + "px";
+        let T = E + m.lineIndex * x + "px", $ = k !== C ? w + h(m.content.substring(0, k - C + 1)) + "px" : w + "px";
         if (!p) {
           p = document.createElement("div"), p.className = O, p.style.position = "absolute", p.style.height = `${x}px`, p.style.background = "black", p.style.borderRadius = "6px", p.style.display = "inline-block", p.style.width = "2px", p.style.zIndex = "100", p.style.top = T, p.style.left = $, e.caretStyle && Object.keys(e.caretStyle).forEach((F) => {
             p.style[F] = e.caretStyle[F];

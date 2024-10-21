@@ -82,7 +82,6 @@ export default class CaretSelection {
         } else {
             this.carets.push(caret);
         }
-        // triggerChange = false;
         let holder = this.editor.blocks.getBlockByIndex(caret.blockIndex)?.holder;
 
         if (!holder) {
@@ -131,6 +130,8 @@ export default class CaretSelection {
         // we have to consider line break
         let paragraphs = parentEl.innerText.split('\n');
 
+
+        // we will simulate paragraph structure by using word width, word length and parent element
         paragraphs.forEach((paragraph, i) => {
             let start = parentEl.innerText.indexOf(paragraph);
             let end = start + paragraph.length;
@@ -177,14 +178,15 @@ export default class CaretSelection {
             datum.lines.forEach((line) => {
                 let lineStartIndex = datum.startOffset + line.startIndex;
                 let lineEndIndex = datum.startOffset + line.endIndex;
-                // 1 - startOffset, 10 - startIndex -> startIndex
-                // 10 - startOffset, 1 - startIndex -> startOffset
                 let start = caret.startOffset > lineStartIndex ? caret.startOffset : lineStartIndex;
                 let end = caret.endOffset > lineEndIndex ? lineEndIndex : caret.endOffset;
 
                 if (caret.startOffset !== 0 && caret.endOffset !== 0 && (caret.startOffset > lineEndIndex)) return;
                 let top = topOffset + (line.lineIndex * lineHeight) + 'px';
-                let left = start !== lineStartIndex ? leftOffset + measureWordWidth(line.content.substring(0, start - lineStartIndex)) + 'px' : leftOffset + 'px';
+
+                // calculate left offset of caret 
+                // if selection is not at the start of line, compute the width before the selection 
+                let left = start !== lineStartIndex ? leftOffset + measureWordWidth(line.content.substring(0, start - lineStartIndex + 1)) + 'px' : leftOffset + 'px';
                 if (!caretIndicator) {
                     // create caret indicator
                     caretIndicator = document.createElement('div');
@@ -249,7 +251,6 @@ export default class CaretSelection {
                 }
 
                 document.getElementById(this.editor.configuration.holder)!.appendChild(selectionBox);
-                // endOffset > line.endIndex ? line.endIndex : line.endIndex - endOffset;
             })
         })
     }
@@ -287,7 +288,6 @@ export default class CaretSelection {
             if (child.children.length > 0) {
                 b.children = this.traverseChildren(child, startOffset, endOffset);
             } else {
-                // b.content = child.innerText
                 b.content = textC;
             }
             sequence.push(...[startOffset, b.endOffset])
