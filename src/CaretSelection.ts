@@ -220,6 +220,12 @@ export default class CaretSelection {
                         span.style.display = 'inline-block';
                         span.style.padding = '0px 4px';
                         span.textContent = caret.display;
+
+                        if (caret.caretStyle) {
+                            Object.keys(caret.caretStyle).forEach((attr) => {
+                                span!.style[attr] = caret.caretStyle![attr];
+                            })
+                        }
                     }
 
                     span.style.top = `-${lineHeight / 2}px`;

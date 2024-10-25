@@ -1,6 +1,6 @@
 {
   "name": "editorjs-caret-selection",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Track Caret, Selection, and easily simulate it for real-time collaboration feature",
   "main": "index.js",
   "scripts": {
