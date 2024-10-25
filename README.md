@@ -127,8 +127,7 @@ In order to calculate approximately correct caret position, please specify font 
 
 ## Realtime Caret Approach
 
-<!-- Please refer to the article here for a more detailed explanation of the approach. -->
-I will write an article about this.
+Please refer to the article - [Build Your Own Collaborative Realtime Notion](https://medium.com/@thomasbrillion/build-your-own-collaborative-realtime-notion-11c361fb2cbe) for a more detailed explanation of the approach.
 
 ## Bugs and Features
 Please kindly submit your issue or request your feature [here](https://github.com/w99910/editorjs-caret-selection/issues).
